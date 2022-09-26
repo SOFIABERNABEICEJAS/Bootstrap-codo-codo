@@ -1,0 +1,35 @@
+body,
+html {
+	height: 100%;
+}
+
+.imagen-principal {
+	height: 600px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("img/bsas.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.imagen-principal-texto {
+	text-align: end;
+	position: absolute;
+	top: 65%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+	color: white;
+}
+
+/* responsive */
+
+@media screen and (max-width: 600px) {
+	.imagen-principal-texto {
+		width: 300px;
+		left: 40%;
+	}
+	.responsive {
+		flex-direction: column;
+	}
+}
