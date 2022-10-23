@@ -24,7 +24,12 @@ html {
 .centrar-imagen {
 	object-fit: contain;
 }
-
+ 
+/* ocultar */
+.ocultar {
+	display: none;
+}
+ 
 /* responsive */
 
 @media screen and (max-width: 600px) {
