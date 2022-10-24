@@ -34,7 +34,7 @@
 							<a class="nav-link p-2" href="#seccion-convertite">Conviertete en orador</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link link-success p-2" href="#seccion-comprar">Comprar tickets</a>
+							<a class="nav-link link-success p-2">Comprar tickets</a>
 						</li>
 					</ul>
 				</div>
@@ -56,7 +56,7 @@
 							<a class="nav-link" href="#seccion-convertite">Conviertete en orador</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link link-success" href="#seccion-comprar" id="boton-comprar-tickets">Comprar tickets</a>
+							<a class="nav-link link-success" href="#boton-comprar-tickets">Comprar tickets</a>
 						</li>
 					</ul>
 				</div>
@@ -64,7 +64,7 @@
 		</nav>
 	</header>
 	<main>
-		<section id="seccion-conferencia ">
+		<section id="seccion-conferencia">
 			<div class="imagen-principal">
 			</div>
 			<div class="imagen-principal-texto">
@@ -75,7 +75,7 @@
 					Te esperamos!</p>
 				<div>
 					<button type="button" class="btn btn-outline-light m-1">Quiero ser operador</button>
-					<button type="button" class="btn btn-success m-1" id="boton-comprar-tickets">Comprar tickets</button>
+					<button id="boton-comprar-tickets" type="button" class="btn btn-success m-1">Comprar tickets</button>
 				</div>
 			</div>
 			</div>
@@ -156,7 +156,7 @@
 			</div>
 
 		</section>
-		<section class="mt-4 d-flex flex-column align-items-center " id="seccion-convertite">
+		<section class="mt-4 mb-5 d-flex flex-column align-items-center " id="seccion-convertite">
 			<div class="d-flex flex-column align-items-center">
 				<p class="text-uppercase">CONVIERTETE EN UN</p>
 				<h4 lass="text-uppercase">ORADOR</h4>
@@ -194,11 +194,10 @@
 
 			</form>
 		</section>
-
-		<section class="d-flex flex-column align-items-center " id="seccion-comprar">
-			<div class="d-flex justify-content-center justify-content-center">
-				<div class="card border-primary mb-3 m-1 " style="max-width: 18rem">
-					<div class="card-body d-flex flex-column align-items-center">
+		<section class=" d-flex flex-column align-items-center d-none" id="seccion-comprar">
+			<div class=" mt-5 d-flex justify-content-center responsive">
+				<div class=" mt-5 card border-primary mb-3 m-1 " style="max-width: 18rem">
+					<div class=" card-body d-flex flex-column align-items-center">
 						<h4 class="card-title m-2">Estudiante</h4>
 						<p class="card-text"> Tiene un descuento de</p>
 						<h5 class="card-title m-2">80%</h5>
@@ -206,7 +205,7 @@
 					</div>
 				</div>
 
-				<div class="card border-success mb-3 m-1" style="max-width: 18rem;">
+				<div class="mt-5 card border-success mb-3 m-1" style="max-width: 18rem;">
 
 					<div class="card-body d-flex flex-column align-items-center justify-content-center">
 						<h4 class="card-title m-2">Trainee</h4>
@@ -216,7 +215,7 @@
 					</div>
 				</div>
 
-				<div class="card border-warning mb-3 m-1" style="max-width: 18rem;">
+				<div class=" mt-5 card border-warning mb-3 m-1" style="max-width: 18rem;">
 
 					<div class="card-body d-flex flex-column align-items-center justify-content-center">
 						<h4 class="card-title m-2"> Junior</h4>
@@ -233,20 +232,20 @@
 			</div>
 			<div class="col-8 d-flex flex-column align-items-center mb-3">
 
-				<form action class=" conteiner row m-3 p-2 col-12 ">
+				<form action class=" conteiner row m-3 p-2 col-12 " id="formulario-comprar-tickets">
 
 					<div class=" row md-3 col-12">
 						<label class="col-6">
-							<input type="text" class="form-control" placeholder="Nombre" required />
+							<input type="text" class="form-control" placeholder="Nombre" />
 						</label>
 						<label class="col-6">
-							<input type="text" class="form-control" placeholder="Apellido" required />
+							<input type="text" class="form-control" placeholder="Apellido" />
 						</label>
 					</div>
 
 					<div class=" row mb-3 mt-3 col-12">
 						<label>
-							<input type="email" class="form-control" placeholder="Correo" required />
+							<input type="email" class="form-control" placeholder="Correo" />
 						</label>
 					</div>
 					<div class=" row col-12">
@@ -254,7 +253,7 @@
 							<input id="input-cantidad" type="number" class="form-control mt-2" placeholder="Cantidad" required />
 						</label>
 						<label class="col-6"> Categoría
-							<select class="form-select mt-2 " aria-label="Default select example">
+							<select class="form-select mt-2 " id="input-categoria" aria-label="Default select example">
 								<option selected value="estudiante">Estudiante</option>
 								<option value="trainee">Trainee</option>
 								<option value="junior">Junior</option>
@@ -264,16 +263,16 @@
 
 					<div class=" row mb-3 mt-5 col-12">
 						<label>
-							<input class="form-control text-primary" type="text" value=" Total a Pagar $ "
-								aria-label=" Total a Pagar $ " disabled readonly>
+							<input id="input-resultado" class="form-control text-primary" type="text" aria-label=" Total a Pagar $ "
+								value="Total a Pagar $ " disabled readonly>
 						</label>
 					</div>
 					<div class=" row mb-3 mt-3 col-12  d-flex justify-content-around">
 						<div class=" row col-6">
-							<button type="submit" class="btn btn-success">Borrar</button>
+							<button class="btn btn-success">Borrar</button>
 						</div>
 						<div class=" row col-6">
-							<button type="submit" class="btn btn-success">Resumen</button>
+							<button type="submit" class="btn btn-success" id="boton-resumen">Resumen</button>
 						</div>
 					</div>
 
@@ -287,7 +286,7 @@
 </body>
 <footer>
 	<div class=" bg-dark text-white p-3 ">
-		<ul class="navbar-nav d-flex flex-row justify-content-around responsive">
+		<ul class="navbar-nav d-flex  justify-content-around responsive">
 			<li class="nav-item">
 				<a class="nav-link active p-2" aria-current="page" href="#">Preguntas frecuentes</a>
 			</li>

@@ -1,6 +1,6 @@
 # Bootstrap CODO A CODO 👩‍💻
 
-Trabajo realizado en 6 horas!! Falta mejorar responsive y diseño en general...
+ Falta mejorar responsive y diseño en general...
 
 ---
 
